@@ -6,7 +6,7 @@ import shutil
 import sys
 
 # git clone的目录
-gitDir = "C:\\Users\\1\\Desktop\\gittemp\\"
+gitDir = "C:\\Users\\1\\Desktop\\hw\\"
 # 文件分片的目录
 fileDir = "C:\\Users\\1\\Desktop\\gulivideo\\"
 
@@ -19,8 +19,6 @@ def push():
         if ".rar" in name:
             from_file_path = fileDir + name
             target_file_path = gitDir + name
-            print(from_file_path)
-            print(target_file_path)
             shutil.move(from_file_path,target_file_path)
             os.system("git add . && git commit -m 1 && git push")
     exit()        
